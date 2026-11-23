@@ -139,8 +139,9 @@
                     <div class="project-info">
                         <div class="project-tags"><span class="tag">PYTHON</span><span class="tag">ODOO ORM</span><span class="tag">MIXIN</span></div>
                         <h3>Motor de Aprobaciones</h3>
-                        <p>Mixin reutilizable que agrega aprobaciones multinivel a cualquier modelo de Odoo. Reglas por modelo y dominio, pasos por grupo o usuario, bitácora y chatter. Gastos y el constructor visual de rutas ya se montan encima.</p>
+                        <p>Mixin reutilizable que agrega aprobaciones multinivel a cualquier modelo de Odoo. Reglas por modelo y dominio, pasos por grupo o usuario, permisos por paso y bitácora. Gastos y el constructor visual de rutas ya se montan encima. 12 pruebas automatizadas.</p>
                         <p class="odoo-stack">approval.rule · approval.step · approval.request</p>
+                        <a href="https://github.com/Isaacespd/odoo19-mx-addons/tree/main/base_approval_engine" target="_blank" rel="noopener" class="project-link">&gt;_ VER_CÓDIGO</a>
                     </div>
                 </article>
                 <article class="odoo-card fade-in" style="transition-delay: 0.1s;">
@@ -152,21 +153,23 @@ gerente ▶ <b>aprobar</b> / rechazar</pre>
                     <div class="project-info">
                         <div class="project-tags"><span class="tag">PYTHON</span><span class="tag">SALE</span><span class="tag">SEGURIDAD</span></div>
                         <h3>Control de Margen en Ventas</h3>
-                        <p>Bloquea la confirmación de cotizaciones por debajo del margen mínimo de la empresa y las manda a un estado de aprobación. Solo un grupo autorizado puede aprobar o rechazar. Con pruebas automatizadas.</p>
+                        <p>Bloquea la confirmación de cotizaciones por debajo del margen mínimo de la empresa y las manda a un estado de aprobación. Solo un grupo autorizado puede aprobar o rechazar. 8 pruebas automatizadas.</p>
                         <p class="odoo-stack">sale.order · res.company · grupos de acceso</p>
+                        <a href="https://github.com/Isaacespd/odoo19-mx-addons/tree/main/sale_margin_approval" target="_blank" rel="noopener" class="project-link">&gt;_ VER_CÓDIGO</a>
                     </div>
                 </article>
                 <article class="odoo-card fade-in" style="transition-delay: 0.2s;">
-                    <pre class="odoo-visual" aria-hidden="true">&lt;cfdi:Comprobante Total="..."&gt;
-  &lt;cfdi:Emisor Rfc="..."/&gt;
-  &lt;tfd:TimbreFiscalDigital UUID/&gt;
+                    <pre class="odoo-visual" aria-hidden="true">SAT 69-B ▶ 14,054 RFC
+EFO010101AA1  ▶ <i>Definitivo</i>   ▶ EFOS
+XAXX010101000 ▶ genérico     ▶ <b>ignorar</b>
 ──────────────────────────
-CFDI 3.3/4.0 ▶ <b>válido</b> · duplicado ▶ <i>alerta</i></pre>
+factura proveedor EFOS ▶ <i>bloqueada</i></pre>
                     <div class="project-info">
-                        <div class="project-tags"><span class="tag">PYTHON</span><span class="tag">XML</span><span class="tag">SAT</span></div>
-                        <h3>Validador CFDI</h3>
-                        <p>Lee XML de CFDI 3.3 y 4.0, extrae RFC emisor/receptor, totales y UUID del timbre, y detecta comprobantes sin timbre o duplicados antes de que lleguen a contabilidad.</p>
-                        <p class="odoo-stack">cfdi.document · xml.etree · mail.thread</p>
+                        <div class="project-tags"><span class="tag">PYTHON</span><span class="tag">SAT 69-B</span><span class="tag">OPEN SOURCE</span></div>
+                        <h3>Validador EFOS (SAT)</h3>
+                        <p>Sincroniza el listado oficial 69-B del SAT y bloquea facturas de proveedores EFOS, cuyos comprobantes no son deducibles. Si la descarga falla no toca ningún contacto. 17 pruebas automatizadas.</p>
+                        <p class="odoo-stack">res.partner · account.move · ir.cron</p>
+                        <a href="https://github.com/Isaacespd/odoo19-mx-addons/tree/main/l10n_mx_partner_validator" target="_blank" rel="noopener" class="project-link">&gt;_ VER_CÓDIGO</a>
                     </div>
                 </article>
                 <article class="odoo-card fade-in" style="transition-delay: 0.3s;">
@@ -183,7 +186,7 @@ X-API-Key ▶ stock.picking ▶ <b>200</b></pre>
                     </div>
                 </article>
             </div>
-            <p class="odoo-cta fade-in">Código privado: disponible para revisión técnica bajo solicitud. <a href="#contacto" class="project-link">&gt;_ SOLICITAR_DEMO</a></p>
+            <p class="odoo-cta fade-in">3 módulos con código abierto (LGPL-3), 37 pruebas y CI en cada push. El resto de la suite está disponible para revisión técnica bajo solicitud. <a href="https://github.com/Isaacespd/odoo19-mx-addons" target="_blank" rel="noopener" class="project-link">&gt;_ VER_REPOSITORIO</a></p>
         </section>
 
         <!-- Sección Proyectos -->
@@ -282,7 +285,7 @@ X-API-Key ▶ stock.picking ▶ <b>200</b></pre>
         <section id="contacto" class="section">
             <div class="contact-card fade-in">
                 <h2 class="glitch" data-text="ESTABLECER_CONEXIÓN">ESTABLECER_CONEXIÓN</h2>
-                <p>Ingeniería en Sistemas (Dic 2025) | Nivel de Inglés: C1 Avanzado</p>
+                <p>Ingeniería en Sistemas · Titulado | Nivel de Inglés: C1 Avanzado</p>
                 <p>El sistema está preparado para recibir transmisiones. ¿Tienes un proyecto o posición en mente?</p>
                 <a href="mailto:isaacespinosabel@gmail.com" class="btn-cyberpunk">ENVIAR_PAQUETE_DE_DATOS</a>
                 <div class="deco-lines"></div>
