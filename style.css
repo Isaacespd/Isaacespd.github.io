@@ -153,12 +153,13 @@ h1, h2, h3 {
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     list-style: none;
     align-items: center;
 }
 
 .nav-links a {
+    white-space: nowrap;
     font-family: var(--font-mono);
     color: var(--cp-blue);
     text-decoration: none;
@@ -609,11 +610,163 @@ footer {
     }
     
     .projects-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .project-tags {
+        flex-wrap: wrap;
     }
     
     .hero-actions {
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+
+/* Sección Odoo Suite */
+.odoo-intro {
+    max-width: 780px;
+    color: #bbb;
+    font-size: 1.15rem;
+    margin-bottom: 2.5rem;
+}
+
+.odoo-intro strong {
+    color: var(--cp-yellow);
+}
+
+.odoo-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.odoo-stat {
+    background: var(--cp-gray);
+    border-left: 3px solid var(--cp-blue);
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.odoo-stat-num {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--cp-yellow);
+    line-height: 1.1;
+}
+
+.odoo-stat-label {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 0.25rem;
+}
+
+.odoo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+    gap: 2rem;
+}
+
+.odoo-card {
+    background: var(--cp-gray);
+    border: 1px solid #333;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 35px), calc(100% - 35px) 100%, 0 100%);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.odoo-card:hover {
+    border-color: var(--cp-yellow);
+    transform: translateY(-5px);
+}
+
+.odoo-visual {
+    margin: 0;
+    padding: 1.5rem;
+    min-height: 150px;
+    background: repeating-linear-gradient(0deg, #0a0f14, #0a0f14 2px, #0c131a 2px, #0c131a 4px);
+    border-bottom: 2px solid var(--cp-blue);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--cp-blue);
+    white-space: pre;
+    overflow-x: auto;
+}
+
+.odoo-visual b {
+    color: #39ff88;
+    font-weight: normal;
+}
+
+.odoo-visual i {
+    color: var(--cp-red);
+    font-style: normal;
+}
+
+.odoo-card .project-tags {
+    flex-wrap: wrap;
+}
+
+.odoo-card .project-info p {
+    margin-bottom: 1rem;
+}
+
+.odoo-card .project-info .odoo-stack {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: #777;
+    margin-bottom: 0;
+}
+
+.odoo-cta {
+    margin-top: 2.5rem;
+    font-family: var(--font-mono);
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .section-header h2,
+    .contact-card h2 {
+        font-size: clamp(1.4rem, 7vw, 2.2rem);
+        overflow-wrap: anywhere;
+    }
+
+    .hero .hero-subtitle {
+        font-size: 6vw;
+    }
+
+    .section-header p,
+    .terminal-badge,
+    .contact-card .btn-cyberpunk {
+        overflow-wrap: anywhere;
+        letter-spacing: 0;
+    }
+
+    .contact-card {
+        padding: 3rem 1.25rem;
+    }
+
+    .contact-card .btn-cyberpunk {
+        max-width: 100%;
+        white-space: normal;
+    }
+
+    .project-info h3 {
+        font-size: 1.4rem;
+    }
+
+    .odoo-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .odoo-visual {
+        font-size: 0.72rem;
+        padding: 1rem;
     }
 }

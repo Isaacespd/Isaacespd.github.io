@@ -23,6 +23,7 @@
                 <li><a href="#inicio">[ INICIO ]</a></li>
                 <li><a href="#experiencia">[ EXPERIENCIA ]</a></li>
                 <li><a href="#habilidades">[ HABILIDADES ]</a></li>
+                <li><a href="#odoo">[ ODOO_SUITE ]</a></li>
                 <li><a href="#proyectos">[ PROYECTOS ]</a></li>
                 <li><a href="#contacto" class="btn-cyberpunk btn-small">INIT_CONTACT</a></li>
             </ul>
@@ -119,6 +120,70 @@
                     <div class="card-deco-bottom"></div>
                 </div>
             </div>
+        </section>
+
+        <!-- Odoo Suite -->
+        <section id="odoo" class="section">
+            <div class="section-header fade-in">
+                <h2 class="glitch" data-text="ODOO_19_SUITE">ODOO_19_SUITE</h2>
+                <p>&gt;_ COMPILANDO_MODULOS_ERP...</p>
+            </div>
+            <p class="odoo-intro fade-in">Suite de <strong>26 módulos propios para Odoo 19</strong> enfocada en problemas reales de empresas mexicanas: aprobaciones, márgenes, cobranza, CFDI y logística. Cada módulo nace de una especificación (spec → plan → tareas) antes de escribir código.</p>
+            <div class="odoo-stats fade-in"><div class="odoo-stat"><span class="odoo-stat-num">26</span><span class="odoo-stat-label">MÓDULOS</span></div><div class="odoo-stat"><span class="odoo-stat-num">19.0</span><span class="odoo-stat-label">VERSIÓN ODOO</span></div><div class="odoo-stat"><span class="odoo-stat-num">25</span><span class="odoo-stat-label">SPECS SDD</span></div><div class="odoo-stat"><span class="odoo-stat-num">MX</span><span class="odoo-stat-label">LOCALIZACIÓN</span></div></div>
+            <div class="odoo-grid">
+                <article class="odoo-card fade-in" style="transition-delay: 0.0s;">
+                    <pre class="odoo-visual" aria-hidden="true">hr.expense  ─┐
+&lt;any.model&gt; ─┴─▶ approval.mixin
+                     │
+        [paso 1]─▶[paso 2]─▶ <b>✔</b></pre>
+                    <div class="project-info">
+                        <div class="project-tags"><span class="tag">PYTHON</span><span class="tag">ODOO ORM</span><span class="tag">MIXIN</span></div>
+                        <h3>Motor de Aprobaciones</h3>
+                        <p>Mixin reutilizable que agrega aprobaciones multinivel a cualquier modelo de Odoo. Reglas por modelo y dominio, pasos por grupo o usuario, bitácora y chatter. Gastos y el constructor visual de rutas ya se montan encima.</p>
+                        <p class="odoo-stack">approval.rule · approval.step · approval.request</p>
+                    </div>
+                </article>
+                <article class="odoo-card fade-in" style="transition-delay: 0.1s;">
+                    <pre class="odoo-visual" aria-hidden="true">SO-0042   margen  <i>8.4%</i>
+mínimo empresa   15.0%
+──────────────────────────
+estado ▶ <i>pendiente_aprobación</i>
+gerente ▶ <b>aprobar</b> / rechazar</pre>
+                    <div class="project-info">
+                        <div class="project-tags"><span class="tag">PYTHON</span><span class="tag">SALE</span><span class="tag">SEGURIDAD</span></div>
+                        <h3>Control de Margen en Ventas</h3>
+                        <p>Bloquea la confirmación de cotizaciones por debajo del margen mínimo de la empresa y las manda a un estado de aprobación. Solo un grupo autorizado puede aprobar o rechazar. Con pruebas automatizadas.</p>
+                        <p class="odoo-stack">sale.order · res.company · grupos de acceso</p>
+                    </div>
+                </article>
+                <article class="odoo-card fade-in" style="transition-delay: 0.2s;">
+                    <pre class="odoo-visual" aria-hidden="true">&lt;cfdi:Comprobante Total="..."&gt;
+  &lt;cfdi:Emisor Rfc="..."/&gt;
+  &lt;tfd:TimbreFiscalDigital UUID/&gt;
+──────────────────────────
+CFDI 3.3/4.0 ▶ <b>válido</b> · duplicado ▶ <i>alerta</i></pre>
+                    <div class="project-info">
+                        <div class="project-tags"><span class="tag">PYTHON</span><span class="tag">XML</span><span class="tag">SAT</span></div>
+                        <h3>Validador CFDI</h3>
+                        <p>Lee XML de CFDI 3.3 y 4.0, extrae RFC emisor/receptor, totales y UUID del timbre, y detecta comprobantes sin timbre o duplicados antes de que lleguen a contabilidad.</p>
+                        <p class="odoo-stack">cfdi.document · xml.etree · mail.thread</p>
+                    </div>
+                </article>
+                <article class="odoo-card fade-in" style="transition-delay: 0.3s;">
+                    <pre class="odoo-visual" aria-hidden="true">GET  /api/v1/deliveries
+POST /api/v1/gps/update
+POST /api/v1/deliveries/&lt;id&gt;/confirm
+──────────────────────────
+X-API-Key ▶ stock.picking ▶ <b>200</b></pre>
+                    <div class="project-info">
+                        <div class="project-tags"><span class="tag">PYTHON</span><span class="tag">REST</span><span class="tag">LOGÍSTICA</span></div>
+                        <h3>API Móvil de Reparto</h3>
+                        <p>Endpoints REST para la app de repartidores: entregas asignadas, rastreo GPS y confirmación de entrega, autenticados con API keys revocables por usuario. Con pruebas automatizadas.</p>
+                        <p class="odoo-stack">http.Controller · stock.picking · fleet</p>
+                    </div>
+                </article>
+            </div>
+            <p class="odoo-cta fade-in">Código privado: disponible para revisión técnica bajo solicitud. <a href="#contacto" class="project-link">&gt;_ SOLICITAR_DEMO</a></p>
         </section>
 
         <!-- Sección Proyectos -->

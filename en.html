@@ -23,6 +23,7 @@
                 <li><a href="#inicio">[ HOME ]</a></li>
                 <li><a href="#experiencia">[ EXPERIENCE ]</a></li>
                 <li><a href="#habilidades">[ SKILLS ]</a></li>
+                <li><a href="#odoo">[ ODOO_SUITE ]</a></li>
                 <li><a href="#proyectos">[ PROJECTS ]</a></li>
                 <li><a href="#contacto" class="btn-cyberpunk btn-small">INIT_CONTACT</a></li>
             </ul>
@@ -119,6 +120,70 @@
                     <div class="card-deco-bottom"></div>
                 </div>
             </div>
+        </section>
+
+        <!-- Odoo Suite -->
+        <section id="odoo" class="section">
+            <div class="section-header fade-in">
+                <h2 class="glitch" data-text="ODOO_19_SUITE">ODOO_19_SUITE</h2>
+                <p>&gt;_ COMPILING_ERP_MODULES...</p>
+            </div>
+            <p class="odoo-intro fade-in">A suite of <strong>26 custom Odoo 19 modules</strong> built around real problems for Mexican companies: approvals, margins, collections, CFDI e-invoicing and logistics. Every module starts as a specification (spec → plan → tasks) before any code is written.</p>
+            <div class="odoo-stats fade-in"><div class="odoo-stat"><span class="odoo-stat-num">26</span><span class="odoo-stat-label">MODULES</span></div><div class="odoo-stat"><span class="odoo-stat-num">19.0</span><span class="odoo-stat-label">ODOO VERSION</span></div><div class="odoo-stat"><span class="odoo-stat-num">25</span><span class="odoo-stat-label">SDD SPECS</span></div><div class="odoo-stat"><span class="odoo-stat-num">MX</span><span class="odoo-stat-label">LOCALIZATION</span></div></div>
+            <div class="odoo-grid">
+                <article class="odoo-card fade-in" style="transition-delay: 0.0s;">
+                    <pre class="odoo-visual" aria-hidden="true">hr.expense  ─┐
+&lt;any.model&gt; ─┴─▶ approval.mixin
+                     │
+        [step 1]─▶[step 2]─▶ <b>✔</b></pre>
+                    <div class="project-info">
+                        <div class="project-tags"><span class="tag">PYTHON</span><span class="tag">ODOO ORM</span><span class="tag">MIXIN</span></div>
+                        <h3>Approval Engine</h3>
+                        <p>Reusable mixin that adds multi-level approvals to any Odoo model. Rules per model and domain, steps per group or user, full audit log and chatter. Expenses and the visual route builder are already built on top of it.</p>
+                        <p class="odoo-stack">approval.rule · approval.step · approval.request</p>
+                    </div>
+                </article>
+                <article class="odoo-card fade-in" style="transition-delay: 0.1s;">
+                    <pre class="odoo-visual" aria-hidden="true">SO-0042   margin  <i>8.4%</i>
+company minimum   15.0%
+──────────────────────────
+state ▶ <i>pending_approval</i>
+manager ▶ <b>approve</b> / reject</pre>
+                    <div class="project-info">
+                        <div class="project-tags"><span class="tag">PYTHON</span><span class="tag">SALE</span><span class="tag">SECURITY</span></div>
+                        <h3>Sales Margin Control</h3>
+                        <p>Blocks confirmation of quotations below the company minimum margin and routes them to an approval state. Only an authorized group can approve or reject. Covered by automated tests.</p>
+                        <p class="odoo-stack">sale.order · res.company · access groups</p>
+                    </div>
+                </article>
+                <article class="odoo-card fade-in" style="transition-delay: 0.2s;">
+                    <pre class="odoo-visual" aria-hidden="true">&lt;cfdi:Comprobante Total="..."&gt;
+  &lt;cfdi:Emisor Rfc="..."/&gt;
+  &lt;tfd:TimbreFiscalDigital UUID/&gt;
+──────────────────────────
+CFDI 3.3/4.0 ▶ <b>valid</b> · duplicate ▶ <i>alert</i></pre>
+                    <div class="project-info">
+                        <div class="project-tags"><span class="tag">PYTHON</span><span class="tag">XML</span><span class="tag">SAT</span></div>
+                        <h3>CFDI Validator</h3>
+                        <p>Parses CFDI 3.3 and 4.0 XML (Mexican e-invoices), extracts issuer/receiver RFC, totals and stamp UUID, and flags unstamped or duplicate invoices before they reach accounting.</p>
+                        <p class="odoo-stack">cfdi.document · xml.etree · mail.thread</p>
+                    </div>
+                </article>
+                <article class="odoo-card fade-in" style="transition-delay: 0.3s;">
+                    <pre class="odoo-visual" aria-hidden="true">GET  /api/v1/deliveries
+POST /api/v1/gps/update
+POST /api/v1/deliveries/&lt;id&gt;/confirm
+──────────────────────────
+X-API-Key ▶ stock.picking ▶ <b>200</b></pre>
+                    <div class="project-info">
+                        <div class="project-tags"><span class="tag">PYTHON</span><span class="tag">REST</span><span class="tag">LOGISTICS</span></div>
+                        <h3>Delivery Mobile API</h3>
+                        <p>REST endpoints for the drivers' app: assigned deliveries, GPS tracking and delivery confirmation, authenticated with per-user revocable API keys. Covered by automated tests.</p>
+                        <p class="odoo-stack">http.Controller · stock.picking · fleet</p>
+                    </div>
+                </article>
+            </div>
+            <p class="odoo-cta fade-in">Private source: available for technical review on request. <a href="#contacto" class="project-link">&gt;_ REQUEST_DEMO</a></p>
         </section>
 
         <!-- Projects Section -->
